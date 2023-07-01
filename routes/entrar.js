@@ -1,10 +1,12 @@
+// entrarRouter.js
+
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 
 router.get('/', (req, res, next) => {
-  res.render('entrar', { title: 'Entrar | Study.io' });
+  res.render('entrar', { title: 'Entrar | Study.io', error: null });
 });
 
 router.post('/', async (req, res, next) => {
@@ -23,7 +25,7 @@ router.post('/', async (req, res, next) => {
       return res.status(401).render('entrar', { title: 'Entrar | Study.io', error: 'Credenciais inválidas' });
     }
 
-    res.redirect('/'); 
+    res.redirect('/');
 
   } catch (error) {
     next(error);

@@ -36,23 +36,27 @@
              <div class="logintitle">Já estuda com a gente?</div>
              <div class="loginsubtitle">Faça seu login e aproveite!</div>
             </div>
-            <div class="formtitle">E-mail</div>
-            <div class="formflexbox">
-                <div class="formbox">
-                    <input type="text" name="email" placeholder="E-mail">
+            <form action="/entrar" method="POST">
+
+                <% if (error) { %>
+                    <div class="error-message"><%= error %></div>
+                  <% } %>
+                <div class="formtitle">E-mail</div>
+                <div class="formflexbox">
+                    <div class="formbox">
+                        <input type="text" name="email" placeholder="E-mail">
+                    </div>
                 </div>
-            </div>
-            <div class="formtitle">Senha</div>
-            <div class="formflexbox">
-                <div class="formbox">
-                    <input type="password" name="senha" placeholder="Senha">
+                <div class="formtitle">Senha</div>
+                <div class="formflexbox">
+                    <div class="formbox">
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
                 </div>
-            </div>
-            <div class="formflexbox">
-                <a href="/">
-                <button type="button" class="logincomplete">Entrar</button>
-                </a>
-            </div>
+                <div class="formflexbox">
+                    <button type="submit" class="logincomplete">Entrar</button>
+                </div>
+            </form>
         </section>
         <section class="nologinsquare">
             <div class="nologtext">Ainda não estuda com a gente?</div>

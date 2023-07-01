@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User'); 
+
 router.get('/', function(req, res, next) {
   res.render('cadastro', { title: 'Criar conta | Study.io' });
 });
@@ -12,14 +13,16 @@ router.post('/', async function(req, res, next) {
   const telefone = req.body.telefone;
 
   try {
-    const user = new User({
+    const newUser = new User({
       nome,
       email,
       senha,
       telefone
     });
 
-    await user.save();
+    const savedUser = await newUser.save(); // Salvar o usuário e receber o usuário salvo
+
+    console.log(savedUser); // Exibir o usuário salvo no console para fins de depuração
 
     res.redirect('/entrar');
 

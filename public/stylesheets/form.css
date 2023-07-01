@@ -357,3 +357,14 @@ line-height: normal;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+.error-message {
+    font-weight: 300;
+    color: #FFF;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
