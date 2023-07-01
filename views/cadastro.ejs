@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/form.css">
+    <link rel="icon" href="/images/icon.png">
+    <title>Criar conta | Study.io</title>
+</head>
+<header>
+    <div>
+        <a href="/">
+            <button data-text="Awesome" class="buttonBetter">
+                <span class="actual-text">&nbsp;study.io&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;study.io&nbsp;</span>
+            </button>
+        </a>
+    </div>
+    <nav>
+        <div id="navTotal"></div>
+    </nav>
+</header>
+<body>
+    <section class="bigsingin">
+        <section class="singinsquare">
+            <div class="titleflexbox">
+                <div class="logintitle">Ainda não é aluno?</div>
+                <div class="loginsubtitle">Não perca tempo, matricule-se agora!</div>
+            </div>
+            <form action="/" method="POST">
+                <div class="formtitle">Nome</div>
+                <div class="formflexbox">
+                    <div class="formbox">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+                </div>
+                <div class="formtitle">E-mail</div>
+                <div class="formflexbox">
+                    <div class="formboxemail">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                </div>
+                </div>
+                <div class="formtitle">Senha</div>
+                <div class="formflexbox">
+                    <div class="formbox">
+                        <input type="password" name="senha" placeholder="Senha" minlength="8" required>
+                    </div>
+                </div>
+                <div class="formtitle">Telefone</div>
+                <div class="formflexbox">
+                    <div class="formbox">
+                        <input type="tel" name="telefone" placeholder="Telefone" pattern="[0-9]{4}-[0-9]{4}" required>
+                    </div>
+                </div>
+                <button type="submit" class="logincomplete">Criar</button>
+            </form>
+        </section>
+    </section>
+</body>
+</html>
