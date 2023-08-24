@@ -1,1 +1,1 @@
-# studyio
+# study.io
